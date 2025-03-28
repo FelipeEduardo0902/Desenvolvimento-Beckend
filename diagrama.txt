@@ -1,0 +1,27 @@
+@startuml
+title Diagrama de Contexto - Plataforma de Ensino Online
+
+actor Docente
+actor Estudante
+actor Administrador
+
+rectangle "Sistema de Ensino Online" {
+  rectangle "Conteúdos"
+  rectangle "Aulas"
+  rectangle "Login"
+  rectangle "Avaliações"
+  rectangle "Administração"
+}
+
+Docente --> Conteúdos
+Docente --> Avaliações
+Docente --> Login
+
+Estudante --> Aulas
+Estudante --> Avaliações
+Estudante --> Login
+
+Administrador --> Administração
+Administrador --> Login
+
+@enduml

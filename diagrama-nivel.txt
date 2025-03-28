@@ -1,0 +1,28 @@
+@startuml
+title Arquitetura em Camadas - Plataforma de Ensino Online (Simplificada)
+
+actor Professor
+actor Estudante
+actor Administrador
+
+rectangle "Camada de Apresentação" {
+  rectangle "Interface Web"
+}
+
+rectangle "Camada de Lógica de Negócio" {
+  rectangle "Serviços do Sistema"
+}
+
+rectangle "Camada de Dados" {
+  database "Banco de Dados"
+}
+
+' Interações
+Professor --> "Interface Web"
+Estudante --> "Interface Web"
+Administrador --> "Interface Web"
+
+"Interface Web" --> "Serviços do Sistema"
+"Serviços do Sistema" --> "Banco de Dados"
+
+@enduml
